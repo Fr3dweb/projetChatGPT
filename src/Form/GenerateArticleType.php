@@ -15,17 +15,10 @@ class GenerateArticleType extends AbstractType
         $builder
             ->add('titre', TextType::class, [
                 'label' => 'Votre titre',
-                'attr' => [
-                    'placeholder' => 'Veuillez renseigner votre titre',
-                ],
             ])
-            ->add('description', TextType::class, [
-                'label' => 'description',
-                'attr' => [
-                    'placeholder' => 'Veuillez renseigner votre description',
-                ],
+            ->add('article', TextType::class, [
+                'label' => 'article',
             ])
-            ->add('image', TextType::class)
             ->add('submit', SubmitType::class, [
                 'label' => 'Valider',
             ])
