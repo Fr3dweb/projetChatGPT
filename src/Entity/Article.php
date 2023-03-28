@@ -17,6 +17,10 @@ class Article
     #[ORM\Column(type: Types::TEXT)]
     private ?string $article = null;
 
+    #[ORM\ManyToOne(inversedBy: 'articles')]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?Category $category = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -30,6 +34,18 @@ class Article
     public function setArticle(string $article): self
     {
         $this->article = $article;
+
+        return $this;
+    }
+
+    public function getCategory(): ?Category
+    {
+        return $this->category;
+    }
+
+    public function setCategory(?Category $category): self
+    {
+        $this->category = $category;
 
         return $this;
     }
