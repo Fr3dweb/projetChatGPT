@@ -1,0 +1,50 @@
+$gptGreen : #193718;
+$gptPink : #ff8bff;
+
+.bgGptGreen
+{
+  background-color: $gptGreen;
+}
+
+.textGptPink
+{
+  color: $gptPink;
+}
+
+.blockquote
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.btnGenArticle {
+  width: 180px;
+  height: 50px;
+  flex: 1 1 auto;
+  margin: 10px;
+  padding: 10px 10px 10px 50px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  border: none;
+  background-size: 285% auto;
+  color: white;
+  background-image: linear-gradient(to right, #193718   0%, #ff8bff 50%, #ff8bff 100%);
+  border-radius: 15px;
+}
+
+.btnGenArticle:hover {
+  background-position: right center;
+  color: #193718;
+}
+
+.htmx-indicator {
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+}
+
