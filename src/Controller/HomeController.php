@@ -20,11 +20,10 @@ class HomeController extends AbstractController
             $data = $form->getData();
             $json = $openAI->getInputArticle($data['article']);
 
-            return $this->render('home/ArticleGenerate.html.twig', [
+            return $this->render('chatGPT/ArticleGenerate.html.twig', [
                 'json' => $json ?? null,
             ]);
         }
-
         return $this->render('home/index.html.twig', [
             'form' => $form->createView(),
         ]);

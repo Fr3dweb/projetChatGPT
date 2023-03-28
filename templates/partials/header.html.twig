@@ -1,0 +1,23 @@
+<nav class="navbar navbar-expand-lg colorBgNav">
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav d-flex justify-content-around col-12">
+                <li  class="nav-item d-block">
+                    <a class="nav-link fw-semibold" href="{{ path('app_home') }}">Accueil</a>
+                </li>
+                <li class="nav-item d-block">
+                    <a class="nav-link fw-semibold" aria-current="page" href=" {{ path('app_pending') }}">En attente</a>
+                </li>
+                <li class="nav-item d-block">
+                    <a class="nav-link fw-semibold" href="{{ path('app_validate') }}">Validé</a>
+                </li>
+                <li class="nav-item d-block">
+                    <a class="nav-link fw-semibold" href="{{ path('app_reject') }}">Refusé</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
