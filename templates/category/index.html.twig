@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block body %}
+
+    <h1 class="text-center"> Toutes Les Catégories | Projet ChatGpt </h1>
+
+    {% if categories is not empty %}
+        <ul>
+            {% for category in categories %}
+                <li><a href="{{ path('app_category_show', { id: category.id }) }}">{{ category.name }}</a></li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Aucune catégorie n'a été trouvée.</p>
+    {% endif %}
+
+    <div>
+        {% block new_category_link %}
+            <a href="{{ path('app_category_new') }}">Créer une nouvelle catégorie</a>
+        {% endblock %}
+    </div>
+
+{% endblock %}

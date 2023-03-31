@@ -15,25 +15,28 @@ class Article
     private ?int $id = null;
 
     #[ORM\Column(type: Types::TEXT)]
-    private ?string $article = null;
+    private ?string $content = null;
 
-    #[ORM\ManyToOne(inversedBy: 'articles')]
+    #[ORM\ManyToOne(inversedBy: 'contents')]
     #[ORM\JoinColumn(nullable: false)]
     private ?Category $category = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $title = null;
 
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getArticle(): ?string
+    public function getContent(): ?string
     {
-        return $this->article;
+        return $this->content;
     }
 
-    public function setArticle(string $article): self
+    public function setContent(string $content): self
     {
-        $this->article = $article;
+        $this->content = $content;
 
         return $this;
     }
@@ -46,6 +49,18 @@ class Article
     public function setCategory(?Category $category): self
     {
         $this->category = $category;
+
+        return $this;
+    }
+
+    public function getTitle(): ?string
+    {
+        return $this->title;
+    }
+
+    public function setTitle(string $title): self
+    {
+        $this->title = $title;
 
         return $this;
     }
